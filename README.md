@@ -29,8 +29,11 @@ Public Method(s):
 ### To Run Application
 
 Step 1: Launch command prompt, change directory to US_Presidents_Repo
+
 Step 2: Type "python US_Presidents_API.py", press Enter
+
 Step 3: Open web browser, go to http://127.0.0.1:5000/US_Presidents/, manipulated data should display
+
 Step 4: Go to http://127.0.0.1:5000/US_Presidents/download, a CSV file should automatically start downloading
 
 
