@@ -16,7 +16,7 @@ Private Method(s):
     
     ._acronymParty() store party information as an acronym, for example: "Whig" --> "W", "Democrat" --> "D"
     
-    ._yearBegin() keep only the year the president began their term in "mm-dd-yyyy" format
+    ._yearBegin() keep only the year the presidents began their term in "mm-dd-yyyy" format
     
     ._finalize() remove unneeded data and rename headers
     
