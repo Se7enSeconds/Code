@@ -67,6 +67,7 @@ app = Flask(__name__)
 
 @app.route("/US_Presidents/")
 def display():
+  global data
   data = US_Presidents().fetch_data()
   data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
   return data.to_html(index=False)
