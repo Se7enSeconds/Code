@@ -9,7 +9,7 @@ app = Flask(__name__)
 onInstance = US_Presidents()
 data = onInstance.fetch_data()
 
-@app.route("/US_Presidents")
+@app.route("/US_Presidents/")
 def display():
   data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
   return data.to_html(index=False)
