@@ -74,10 +74,10 @@ def display():
 def download_csv():
   data = US_Presidents().fetch_data()
   data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
-  resp = make_response(data.to_csv(index=False))
-  resp.headers["Content-Disposition"] = "attachment; filename=US_Presidents.csv"
-  resp.headers["Content-Type"] = "text/csv"
-  return resp
+  response = make_response(data.to_csv(index=False))
+  response.headers["Content-Disposition"] = "attachment; filename=US_Presidents.csv"
+  response.headers["Content-Type"] = "text/csv"
+  return response
 
 if __name__ == "__main__":
   app.run(debug=True)
