@@ -1,3 +1,5 @@
+#!/usr/bin/env
+
 from flask import *
 from datetime import datetime
 import numpy as np
@@ -63,7 +65,7 @@ class US_Presidents:
 
 app = Flask(__name__)
 
-@app.route("/US_Presidents")
+@app.route("/US_Presidents/")
 def display():
   data = US_Presidents().fetch_data()
   return data.to_html(index=False)
@@ -79,3 +81,5 @@ def download_csv():
 
 if __name__ == "__main__":
   app.run(debug=True)
+  
+  
