@@ -1,7 +1,5 @@
 #!/usr/bin/env
 
-from flask import *
-from datetime import datetime
 import numpy as np
 import pandas as pd
 pd.options.mode.chained_assignment = None
@@ -62,24 +60,6 @@ class US_Presidents:
     manipulated_data = self._data
     self._reset()
     return manipulated_data
-
-app = Flask(__name__)
-
-@app.route("/US_Presidents/")
-def display():
-  global data
-  data = US_Presidents().fetch_data()
-  data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
-  return data.to_html(index=False)
-
-@app.route("/US_Presidents/download")
-def download_csv():
-  response = make_response(data.to_csv(index=False))
-  response.headers["Content-Disposition"] = "attachment; filename=US_Presidents.csv"
-  response.headers["Content-Type"] = "text/csv"
-  return response
-
-if __name__ == "__main__":
-  app.run(debug=True)
+  
   
   
