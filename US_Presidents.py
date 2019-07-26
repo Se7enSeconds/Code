@@ -63,12 +63,12 @@ class US_Presidents:
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/US_Presidents")
 def display():
   data = US_Presidents().fetch_data()
   return data.to_html(index=False)
 
-@app.route("/download")
+@app.route("/US_Presidents/download")
 def download_csv():
   data = US_Presidents().fetch_data()
   data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
