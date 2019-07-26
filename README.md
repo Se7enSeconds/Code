@@ -4,7 +4,7 @@ US_Presidents.py manipulate US_Presidents.json file, produce a pandas dataframe
 
 US_Presidents_API.py create a Flask API to download manipulated data as csv file
 
-### Class and Methods
+### About US_Presidents Module
 
 Private Method(s):
 
