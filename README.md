@@ -1,8 +1,8 @@
 ## About US_Presidents_Repo
 
-US_Presidents.py manipulate US_Presidents.json file, produce a pandas dataframe
+US_Presidents.py manipulate US_Presidents.json file, produce a Pandas Dataframe
 
-US_Presidents_API.py create a Flask API to download manipulated data as csv file
+US_Presidents_API.py create a Flask API to download manipulated data as CSV file
 
 ### About US_Presidents Module
 
@@ -24,13 +24,13 @@ Private Method(s):
     
 Public Method(s):
 
-    .fetch_data() manipulate data, return as a pandas dataframe, then reset to default
+    .fetch_data() manipulate data, return as a Pandas Dataframe, then reset to default
 
 ### To Run Application
 
 1. Launch command prompt, change directory to US_Presidents_Repo
 2. Type "python US_Presidents_API.py", press Enter
 3. Open web browser, go to http://127.0.0.1:5000/US_Presidents/, manipulated data should display
-4. Go to http://127.0.0.1:5000/US_Presidents/download, a csv file should automatically start downloading
+4. Go to http://127.0.0.1:5000/US_Presidents/download, a CSV file should automatically start downloading
 
 
