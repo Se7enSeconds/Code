@@ -65,15 +65,15 @@ class US_Presidents:
 
 app = Flask(__name__)
 
+data = US_Presidents().fetch_data()
+
 @app.route("/US_Presidents/")
 def display():
-  data = US_Presidents().fetch_data()
+  data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
   return data.to_html(index=False)
 
 @app.route("/US_Presidents/download")
 def download_csv():
-  data = US_Presidents().fetch_data()
-  data['Ingestion Time'] = datetime.now().strftime('%b-%d-%Y %H:%M:%S')
   response = make_response(data.to_csv(index=False))
   response.headers["Content-Disposition"] = "attachment; filename=US_Presidents.csv"
   response.headers["Content-Type"] = "text/csv"
