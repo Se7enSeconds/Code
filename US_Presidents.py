@@ -61,5 +61,3 @@ class US_Presidents:
     self._reset()
     return manipulated_data
   
-  
-  
